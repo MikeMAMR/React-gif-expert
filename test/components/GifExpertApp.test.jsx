@@ -12,7 +12,8 @@ describe('Pruebas en GifExpertApp', () => {
         // fireEvent.input(input, { target: {value: inputValue} });
         fireEvent.submit(form);
         //expect(input.value).toBe('saitama');
-        screen.debug();
+        expect(screen.getAllByText('Cargando...').length).toBe(2);
+        // screen.debug();
     });
 
 });
